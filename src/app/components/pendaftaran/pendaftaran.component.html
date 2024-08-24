@@ -1,0 +1,305 @@
+<div class="bg-body mt-3">
+    <h3 class="text-warning fw-bold text-center">PENDAFTARAN</h3>
+    <hr class="divider my-4 mx-auto bg-warning border-warning">
+    <div class="px-md-5">
+        <p-tabView [scrollable]="true">
+            <p-tabPanel>
+                <ng-template pTemplate="header">
+                    <div class="flex align-items-center gap-2">
+                        <span class="font-bold white-space-nowrap m-0 text-blue">
+                            DATA PESERTA
+                        </span>
+                    </div>
+                </ng-template>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="pangkalan">Pangkalan</label>
+                            <input pInputText id="pangkalan" aria-describedby="pangkalan-help"
+                                placeholder="SMP XX SEMARANG" [(ngModel)]="pangkalan" (ngModelChange)="onInput()" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-lg-0 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="pendaftar">Nama Pendaftar</label>
+                            <input pInputText id="pendaftar" [(ngModel)]="nama_pendaftar"
+                                aria-describedby="pendaftar-help" placeholder="Masukkan nama pendaftar" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4 p-fluid">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="kwarran">KWARRAN</label>
+                            <p-dropdown [options]="kwaran" [filter]="true" filterBy="LABEL" [(ngModel)]="selectedKwaran"
+                                optionLabel="LABEL" placeholder="Pilih kwarran" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-lg-0 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="no-whatsapp">No. Whatsapp</label>
+                            <input pInputText id="no-whatsapp" aria-describedby="no-whatsapp-help" [(ngModel)]="no_wa"
+                                placeholder="08XXXXXXXXXX" />
+                        </div>
+                    </div>
+                </div>
+            </p-tabPanel>
+            <p-tabPanel>
+                <ng-template pTemplate="header">
+                    <div class="flex align-items-center gap-2">
+                        <span class="font-bold white-space-nowrap m-0 text-blue">
+                            REGU PUTRA
+                        </span>
+                    </div>
+                </ng-template>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="nama-regu-pa">Nama Regu Putra</label>
+                            <input pInputText id="nama-regu-pa" [(ngModel)]="regu_putra" (ngModelChange)="onInput()"
+                                aria-describedby="nama-regu-pa-help" placeholder="Masukkan nama regu putra" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-lg-0 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="bindamping">Nama Bindamping Putra</label>
+                            <input pInputText id="bindamping" [(ngModel)]="bindampingPutra"
+                                aria-describedby="bindamping-help" placeholder="Masukkan nama bindamping putra" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="angota-1">Nama Anggota 1</label>
+                            <input pInputText id="angota-1" [(ngModel)]="anggota_l_1" aria-describedby="angota-1-help"
+                                placeholder="Masukkan nama anggota 1" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-lg-0 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="anggota-2">Nama Anggota 2</label>
+                            <input pInputText id="anggota-2" [(ngModel)]="anggota_l_2" aria-describedby="anggota-2-help"
+                                placeholder="Masukkan nama anggota 2" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="angota-3">Nama Anggota 3</label>
+                            <input pInputText id="angota-3" [(ngModel)]="anggota_l_3" aria-describedby="angota-3-help"
+                                placeholder="Masukkan nama anggota 3" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-lg-0 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="anggota-4">Nama Anggota 4</label>
+                            <input pInputText id="anggota-4" [(ngModel)]="anggota_l_4" aria-describedby="anggota-4-help"
+                                placeholder="Masukkan nama anggota 4" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="angota-5">Nama Anggota 5</label>
+                            <input pInputText id="angota-5" [(ngModel)]="anggota_l_5" aria-describedby="angota-5-help"
+                                placeholder="Masukkan nama anggota 5" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-lg-0 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="anggota-6">Nama Anggota 6</label>
+                            <input pInputText id="anggota-6" [(ngModel)]="anggota_l_6" aria-describedby="anggota-6-help"
+                                placeholder="Masukkan nama anggota 6" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="angota-7">Nama Anggota 7</label>
+                            <input pInputText id="angota-7" [(ngModel)]="anggota_l_7" aria-describedby="angota-7-help"
+                                placeholder="Masukkan nama anggota 7" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-lg-0 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="anggota-8">Nama Anggota 8</label>
+                            <input pInputText id="anggota-8" [(ngModel)]="anggota_l_8" aria-describedby="anggota-8-help"
+                                placeholder="Masukkan nama anggota 8" />
+                        </div>
+                    </div>
+                </div>
+            </p-tabPanel>
+            <p-tabPanel>
+                <ng-template pTemplate="header">
+                    <div class="flex align-items-center gap-2">
+                        <span class="font-bold white-space-nowrap m-0 text-blue">
+                            REGU PUTRI
+                        </span>
+                    </div>
+                </ng-template>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="nama-regu-pi">Nama Regu Putri</label>
+                            <input pInputText id="nama-regu-pi" [(ngModel)]="regu_putri" (ngModelChange)="onInput()"
+                                aria-describedby="nama-regu-pi-help" placeholder="Masukkan nama regu putri" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-lg-0 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="bindamping">Nama Bindamping Putri</label>
+                            <input pInputText id="bindamping" [(ngModel)]="bindampingPutri"
+                                aria-describedby="bindamping-help" placeholder="Masukkan nama bindamping puteri" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="angota-1">Nama Anggota 1</label>
+                            <input pInputText id="anggota-1" [(ngModel)]="anggota_p_1" aria-describedby="angota-1-help"
+                                placeholder="Masukkan nama anggota 1" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-lg-0 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="anggota-2">Nama Anggota 2</label>
+                            <input pInputText id="anggota-2" [(ngModel)]="anggota_p_2" aria-describedby="anggota-2-help"
+                                placeholder="Masukkan nama anggota 2" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="angota-3">Nama Anggota 3</label>
+                            <input pInputText id="anggota-3" [(ngModel)]="anggota_p_3" aria-describedby="angota-3-help"
+                                placeholder="Masukkan nama anggota 3" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-lg-0 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="anggota-4">Nama Anggota 4</label>
+                            <input pInputText id="anggota-4" [(ngModel)]="anggota_p_4" aria-describedby="anggota-4-help"
+                                placeholder="Masukkan nama anggota 4" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="angota-5">Nama Anggota 5</label>
+                            <input pInputText id="anggota-5" [(ngModel)]="anggota_p_5" aria-describedby="angota-5-help"
+                                placeholder="Masukkan nama anggota 5" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-lg-0 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="anggota-6">Nama Anggota 6</label>
+                            <input pInputText id="anggota-6" [(ngModel)]="anggota_p_6" aria-describedby="anggota-6-help"
+                                placeholder="Masukkan nama anggota 6" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="angota-7">Nama Anggota 7</label>
+                            <input pInputText id="anggota-7" [(ngModel)]="anggota_p_7" aria-describedby="angota-7-help"
+                                placeholder="Masukkan nama anggota 7" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-lg-0 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="anggota-8">Nama Anggota 8</label>
+                            <input pInputText id="anggota-8" [(ngModel)]="anggota_p_8" aria-describedby="anggota-8-help"
+                                placeholder="Masukkan nama anggota 8" />
+                        </div>
+                    </div>
+                </div>
+            </p-tabPanel>
+            <p-tabPanel>
+                <ng-template pTemplate="header">
+                    <div class="flex align-items-center gap-2">
+                        <span class="font-bold white-space-nowrap m-0 text-blue">
+                            BUAT AKUN
+                        </span>
+                    </div>
+                </ng-template>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="username-putra">Username <small>(Regu Putra)</small></label>
+                            <input pInputText id="username-putra" aria-describedby="username-putra-help"
+                                placeholder="Isi pangkalan dan regu" [(ngModel)]="username_putra" readonly />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-lg-0 mt-4 p-fluid">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="password-putra">Password <small>(Regu Putra)</small></label>
+                            <p-password [toggleMask]="true" [(ngModel)]="password_putra" [feedback]="false" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="username-putri">Username <small>(Regu Putri)</small></label>
+                            <input pInputText id="username-putri" aria-describedby="username-putri-help"
+                                placeholder="Isi pangkalan dan regu" [(ngModel)]="username_putri" readonly />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-lg-0 mt-4 p-fluid">
+                        <div class="d-flex flex-column gap-2">
+                            <label for="password-putri">Password <small>(Regu Putri)</small></label>
+                            <p-password [toggleMask]="true" [(ngModel)]="password_putri" [feedback]="false" />
+                        </div>
+                    </div>
+                </div>
+            </p-tabPanel>
+            <!-- <p-tabPanel>
+                <ng-template pTemplate="header">
+                    <div class="flex align-items-center gap-2">
+                        <span class="font-bold white-space-nowrap m-0 text-blue">
+                            UPLOAD DOKUMEN
+                        </span>
+                    </div>
+                </ng-template>
+                <p>
+                    Coming Soon
+                </p>
+            </p-tabPanel> -->
+            <p-tabPanel>
+                <ng-template pTemplate="header">
+                    <div class="flex align-items-center gap-2">
+                        <span class="font-bold white-space-nowrap m-0 text-blue">
+                            KUNCI DATA
+                        </span>
+                    </div>
+                </ng-template>
+                <div class="">
+                    <p-messages [(value)]="messages" [enableService]="false" [closable]="false" />
+                </div>
+                <div class="card p-3">
+                    <div class="text-center">
+                        <h5><strong>PENGUNCIAN DATA PENDAFTARAN</strong></h5>
+                        <h6>PASTIKAN ANDA SUDAH YAKIN DENGAN SELURUH ISIAN YANG TELAH ANDA SIMPAN!</h6>
+                        <h6>PERIKSA KEMBALI DATA ANDA!</h6>
+                        <h6>SETELAH ANDA KLIK TOMBOL KUNCI DATA, MAKA ANDA TIDAK DAPAT MELAKUKAN PERBAIKAN DATA</h6>
+                        <h6>TOMBOL KUNCI DATA AKAN AKTIF SETELAH ANDA MELENGKAPI SELURUH ISIAN DAN MELAKUKAN SIMPAN DATA
+                        </h6>
+                        <p style="color: red;font-style: italic;">*Upload berkas dilakukan setelah berhasil melakukan
+                            pendaftaran pada dashboard masing masing peserta</p>
+
+                        <button [disabled]="!isFormComplete()" pButton class="p-button-warning mt-5"
+                            style="border-radius: 8px;" label="KUNCI DATA" (click)="onKunciData()"></button>
+                    </div>
+                </div>
+            </p-tabPanel>
+        </p-tabView>
+    </div>
+</div>
